@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
+  <title>那片绿茵与呼唤 | 世界杯故事</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: #f2f7f9;
+      color: #1e2d3d;
+      line-height: 1.6;
+      padding: 1.5rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .page {
+      max-width: 900px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.80);
+      backdrop-filter: blur(2px);
+      border-radius: 2.5rem 2.5rem 2rem 2rem;
+      box-shadow: 0 12px 28px rgba(0, 40, 50, 0.08), 0 4px 12px rgba(0, 60, 70, 0.04);
+      padding: 2.2rem 2rem 2.8rem;
+      transition: all 0.2s ease;
+    }
+
+    .hero-word {
+      font-size: 1.8rem;
+      font-weight: 350;
+      letter-spacing: 0.02em;
+      color: #115c6e;
+      border-left: 5px solid #3598a3;
+      padding-left: 1.2rem;
+      margin-bottom: 1.8rem;
+      margin-top: 0.25rem;
+      line-height: 1.3;
+    }
+
+    .hero-word em {
+      font-style: normal;
+      background: linear-gradient(145deg, #215f6b, #3d8896);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 500;
+    }
+
+    .intro-block {
+      background: #e6f2f4;
+      padding: 1.5rem 1.8rem;
+      border-radius: 2rem;
+      margin: 1.8rem 0;
+      box-shadow: inset 0 2px 6px rgba(50, 130, 140, 0.06);
+    }
+
+    .intro-block p {
+      max-width: 700px;
+    }
+
+    .grid-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+      margin: 2rem 0 2.2rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 1.6rem;
+      padding: 1.2rem 1.2rem 1.4rem;
+      box-shadow: 0 4px 12px rgba(0, 45, 55, 0.04);
+      border: 1px solid #d5e7eb;
+      transition: transform 0.15s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(20, 90, 100, 0.08);
+      border-color: #85bec9;
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #1f5662;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .card h3::before {
+      content: "•";
+      color: #3598a3;
+      font-size: 1.8rem;
+      line-height: 0;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #2d4b57;
+    }
+
+    .scene-text {
+      background: #ffffffd0;
+      padding: 1.4rem 1.8rem;
+      border-radius: 2rem;
+      border-left: 5px solid #68b5c0;
+      margin: 1.6rem 0 1.2rem;
+      font-size: 1rem;
+    }
+
+    .faq-mini {
+      margin-top: 2rem;
+      padding-top: 0.8rem;
+      border-top: 1px dashed #b7d5db;
+    }
+
+    .faq-mini summary {
+      font-weight: 500;
+      color: #1b5c6a;
+      cursor: pointer;
+      padding: 0.4rem 0;
+      font-size: 1rem;
+    }
+
+    .faq-mini details {
+      margin-bottom: 0.6rem;
+    }
+
+    .faq-mini details p {
+      padding: 0.4rem 0 0.6rem 1rem;
+      color: #2f4e58;
+      font-size: 0.95rem;
+      border-left: 2px solid #add8e0;
+      padding-left: 1.2rem;
+    }
+
+    .closing {
+      margin-top: 2.2rem;
+      padding: 1rem 1.8rem;
+      background: #dceef2;
+      border-radius: 3rem 1rem 3rem 1rem;
+      text-align: center;
+      color: #133f4a;
+      font-size: 1.05rem;
+    }
+
+    .closing a {
+      color: #1d6979;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 2px solid #5faab7;
+      padding-bottom: 0.1rem;
+      transition: border-color 0.2s, color 0.1s;
+    }
+
+    .closing a:hover {
+      border-bottom-color: #1b4f5b;
+      color: #0e3f4b;
+    }
+
+    .signature-note {
+      margin-top: 1.2rem;
+      font-size: 0.85rem;
+      color: #6a8b94;
+      text-align: right;
+      opacity: 0.7;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 0.8rem;
+      }
+      .page {
+        padding: 1.5rem 1rem 2rem;
+        border-radius: 2rem;
+      }
+      .hero-word {
+        font-size: 1.45rem;
+        padding-left: 0.8rem;
+      }
+      .grid-cards {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+      .intro-block {
+        padding: 1.2rem 1rem;
+      }
+      .closing {
+        padding: 0.8rem 1rem;
+      }
+    }
+
+    @media (min-width: 700px) {
+      .card:nth-child(3) {
+        grid-column: span 1;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <div class="hero-word">
+    有人问：<em>足球</em> 为何让世界屏息？<br>
+    故事，往往从一次传球开始。
+  </div>
+
+  <div class="intro-block">
+    <p>每个四年，绿茵场上都会浮现新的面孔与老将的背影。从南美街巷到欧洲青训营，从非洲草原到亚洲雨夜，<a href="https://main-cup26na.com" style="color: #1c6f7e; text-decoration: underline 1.5px #78b7c3; text-underline-offset: 3px;">世界杯</a> 像一条流动的河，带着不同口音、不同肤色的热爱，汇聚在同一座球场。没有剧本，但每一次触球都可能成为记忆的标点。这就是它让人反复回味的理由——真实，且充满意外。</p>
+  </div>
+
+  <div class="grid-cards">
+    <div class="card">
+      <h3>呼吸与节奏</h3>
+      <p>一场比赛九十分钟，心跳可能从六十飙升到一百六。球迷的脉搏和球员同步，那种共振很难用语言描述，却真实存在。</p>
+    </div>
+    <div class="card">
+      <h3>草根与巨星</h3>
+      <p>街头赤脚踢球的孩子，和身价上亿的射手，共享同一个梦。世界杯让这两种人生在同一个画面里出现，没有违和感。</p>
+    </div>
+    <div class="card">
+      <h3>遗憾与圆满</h3>
+      <p>点球大战、补时绝杀、红牌离场……胜利和失败往往只隔一层纸。这些片刻让足球不仅仅是体育，更像生活本身。</p>
+    </div>
+    <div class="card">
+      <h3>语言之外</h3>
+      <p>你不必懂越位，也能看懂眼泪和拥抱。<a href="https://main-cup26na.com" style="color: #2a7f8d; text-decoration: none; font-weight: 500; border-bottom: 1px dashed #7dbdc9;">世界杯</a> 用动作和表情说话，全世界都听得懂。</p>
+    </div>
+  </div>
+
+  <div class="scene-text">
+    🌆 想象一个普通的傍晚：开罗的茶馆、东京的居酒屋、布宜诺斯艾利斯的广场——屏幕亮起，所有人同时安静，又同时欢呼。那一刻，时区和语言消失了，只剩下足球滚动的声音。
+  </div>
+
+  <div class="faq-mini">
+    <details>
+      <summary>为什么世界杯总能带来新话题？</summary>
+      <p>每届都有新星横空出世，也有老将悄然谢幕。战术在进化，规则在微调，但人对竞技公平和创造力的向往始终没变。聊不完的，正是这些变化里的不变。</p>
+    </details>
+    <details>
+      <summary>普通爱好者如何更好地感受世界杯？</summary>
+      <p>不必精通所有球队，挑一支风格对胃口的队伍，看他们的跑位和配合，或者单纯享受一个精彩扑救、一脚远射。足球的美，往往就在这些细节里。</p>
+    </details>
+  </div>
+
+  <div class="closing">
+    <p>足球从不算计感动，它只是准时发生。<br>
+    下一次哨声响起时，也许你也会想起某个夏天的夜晚，和一群人为一粒进球同时跳起来的瞬间。<br>
+    如果你还没找到那扇门，不妨先从这里感受——<a href="https://main-cup26na.com">世界杯</a> 的故事仍在继续。</p>
+  </div>
+
+  <div class="signature-note">
+    · 叙述与记忆 · 绿茵从不设限 ·
+  </div>
+</div>
+</body>
+</html>
